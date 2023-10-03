@@ -131,7 +131,7 @@ Usage: #example
 
 
 Instance: ex-consent-treat
-InstanceOf: http://johnmoehrke.github.io/ConsentWithSegmentation/StructureDefinition/ConsentTreat
+InstanceOf: johnmoehrke.consentwithsegmentation.consenttreat
 Title: "Consent for treatment example"
 Description: "Consent for purposes of use involved in treatment: Treatment/Payment/Operations"
 Usage: #example
@@ -236,7 +236,7 @@ Title: "The test plan for the IG"
 Description: "Something good"
 * status = #active
 // todo: don't know what to put in scope
-* scope[+] = Reference(http://johnmoehrke.github.io/ConsentWithSegmentation/StructureDefinition/ConsentTreat)
+* scope[+] = Reference(johnmoehrke.consentwithsegmentation.consenttreat)
 * testTools = "some good tool"
 * description = "Test user access against various kinds of Consent"
 * testCase[+].sequence = 1
@@ -360,4 +360,4 @@ Title: "A Test Script"
 Description: "Some good thing"
 * name = "RudimentaryConsetTreatTest"
 * status = #active
-* scope.artifact = Canonical(http://johnmoehrke.github.io/ConsentWithSegmentation/StructureDefinition/ConsentTreat)
+* scope.artifact = Canonical(johnmoehrke.consentwithsegmentation.consenttreat)

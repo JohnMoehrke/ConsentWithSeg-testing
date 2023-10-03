@@ -5,7 +5,7 @@ This is an experimental IG, and does not contain constraints or guidance. This p
 </div>
 <br clear="all">
 
-This IG focuses on testing of [ConsentWithSegmentation IG](http://johnmoehrke.github.io/ConsentWithSegmentation)
+This IG focuses on testing of [ConsentWithSegmentation IG]({{site.data.fhir.johnmoehrke.consentwithsegmentation}})
 
 ### Download
 
