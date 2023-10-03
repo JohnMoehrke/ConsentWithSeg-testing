@@ -1,0 +1,15 @@
+== Suppressed Messages ==
+
+# Grahame said we can ignore these for now 
+Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+
+# RelatedPerson relationship no longer has natural relationships in it.
+None of the codings provided are in the value set 'Patient Relationship Type' (http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype|5.0.0), and a coding is recommended to come from this value set) (codes = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SON)
+
+# no worry
+Reference to draft item http://hl7.org/fhir/standards-status|1.0.0
+
+# warnings that are not critical to the reason these examples exist
+WARNING: Observation/ex-ObservationAlcoholUse: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {wine glasses} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit SHOULD contain the annotation
+WARNING: Observation/ex-ObservationAlcoholUse: Observation: Best Practice Recommendation: In general, all observations should have a performer
+WARNING: Observation/ex-bloodSugarB-0: Observation: Best Practice Recommendation: In general, all observations should have a performer

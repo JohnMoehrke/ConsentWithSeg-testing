@@ -1,0 +1,75 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: johnmoehrke.consentwithseg-testing
+canonical: http://johnmoehrke.github.io/ConsentWithSeg-testing
+name: JohnMoehrke_ConsentWithSeg-testing
+title: "JohnMoehrke Consent with Segmented data - Testing IG"
+description: "This Implementation Guide is focused on testing of the IG that addresses privacy Consent resource with segmented data."
+status: draft
+version: 0.1.0-current
+fhirVersion: 5.0.0
+#fhirVersion: 4.3.0
+#fhirVersion: 4.0.1
+copyrightYear: 2022+
+releaseLabel: ci-build
+publisher:
+  name: John Moehrke (himself)
+  url: http://healthcaresecprivacy.blogspot.com
+  email: JohnMoehrke@gmail.com
+contact:
+  - name: John Moehrke (himself)
+    telecom:
+      - system: email
+        value: JohnMoehrke@gmail.com
+license: CC-BY-4.0
+jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
+extension: 
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: draft
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 0
+dependencies:
+  us.nlm.vsac: 
+    version: 0.9.0
+    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
+  johnmoehrke.consentwithsegmentation:
+    version: current
+    uri: http://johnmoehrke.github.io/ConsentWithSegmentation/ImplementationGuide/johnmoehrke.consentwithsegmentation
+
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - fsh-generated/resources
+#  path-pages:
+#    - input/pagecontent
+#    - fsh-generated/includes
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'false'
+  logging: progress
+  shownav: 'true'
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  propagate-status: 'true'
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  TestPlan: testplan.html
+  Artifacts: artifacts.html
+
+
+pages:
+  index.md:
+    title: specification
+    generation: markdown
+  testplan.md:
+    title: Test Plan
+    generation: markdown
+
+    
