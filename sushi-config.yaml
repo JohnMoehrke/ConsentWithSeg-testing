@@ -2,9 +2,9 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: johnmoehrke.consentwithseg-testing
+id: johnmoehrke.consentwithsegmentation.testing
 canonical: http://johnmoehrke.github.io/ConsentWithSeg-testing
-name: JohnMoehrke_ConsentWithSeg-testing
+name: JohnMoehrke_ConsentWithSegmentation_testing
 title: "JohnMoehrke Consent with Segmented data - Testing IG"
 description: "This Implementation Guide is focused on testing of the IG that addresses privacy Consent resource with segmented data."
 status: draft
@@ -31,9 +31,6 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 0
 dependencies:
-  us.nlm.vsac: 
-    version: 0.9.0
-    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
   johnmoehrke.consentwithsegmentation:
     version: current
     uri: http://johnmoehrke.github.io/ConsentWithSegmentation/ImplementationGuide/johnmoehrke.consentwithsegmentation
