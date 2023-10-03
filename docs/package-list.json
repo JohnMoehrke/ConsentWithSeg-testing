@@ -1,13 +1,13 @@
 {
- "package-id" : "johnmoehrke.ConsentWithSegmentation",
- "title" : "Example of slicing",
- "canonical" : "http://johnmoehrke.github.io/ConsentWithSegmentation",
+ "package-id" : "johnmoehrke.consentwithseg-testing",
+ "title" : "Example of Testing IG for a Profile IG",
+ "canonical" : "http://johnmoehrke.github.io/ConsentWithSeg-testing",
  "introduction" : "## blah blah",
  "category" : "EHR Access",
  "list" : [{
   "version" : "current",
   "desc" : "Continuous Integration Build (latest in version control)",
-  "path" : "http://build.fhir.org/ig/JohnMoehrke/ConsentWithSegmentation/branches/main/index.html",
+  "path" : "http://build.fhir.org/ig/JohnMoehrke/ConsentWithSeg-testing/branches/main/index.html",
   "status" : "ci-build",
   "current" : true
  }
