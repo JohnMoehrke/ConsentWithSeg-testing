@@ -206,7 +206,8 @@ This example Observation resource to represent alcohol use assessment in a patie
 * code = http://loinc.org#74013-4
 * subject = Reference(Patient/ex-patient)
 * effectiveDateTime = "2022-06-13"
-* valueQuantity = 5 '{wine glasses}/d' 
+* valueQuantity = 5 '/d' "wine glasses per day"
+* performer = Reference(Patient/ex-patient)
 
 Instance:   ex-bloodSugarB-0
 InstanceOf: Observation
@@ -227,6 +228,7 @@ holding typical health values
 * valueQuantity = 99 'mg/dL' 
 // no comments in this one as comments is only in DSTU2
 * note.text = "a bit low, no indicated method, no indicated eating"
+* performer = Reference(Patient/ex-patient)
 
 
 
