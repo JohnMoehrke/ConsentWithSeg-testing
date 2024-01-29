@@ -5,8 +5,8 @@
 id: johnmoehrke.consentwithsegmentation.testing
 canonical: http://johnmoehrke.github.io/ConsentWithSeg-testing
 name: JohnMoehrke_ConsentWithSegmentation_testing
-title: "JohnMoehrke Consent with Segmented data - Testing IG"
-description: "This Implementation Guide is focused on testing of the IG that addresses privacy Consent resource with segmented data."
+title: "JohnMoehrke Consent with Segmented data - Testing Guide (TG)"
+description: "This Implementation Guide is focused on testing of the TG that addresses privacy Consent resource with segmented data."
 status: draft
 version: 0.1.0-current
 fhirVersion: 5.0.0

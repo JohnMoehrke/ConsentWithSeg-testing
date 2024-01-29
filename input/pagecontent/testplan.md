@@ -3,7 +3,7 @@
 
 [Cucumber starter](https://cucumber.io/docs/gherkin/reference/)
 
-The IG [Test Plan](TestPlan-theTestPlan.html)
+The [Test Plan](TestPlan-theTestPlan.html)
 
 ### Actors
 
