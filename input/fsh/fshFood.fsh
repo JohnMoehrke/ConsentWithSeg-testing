@@ -238,7 +238,7 @@ Title: "The test plan for the IG"
 Description: "Something good"
 * status = #active
 // todo: don't know what to put in scope
-* scope[+] = Reference(johnmoehrke.consentwithsegmentation.consenttreat)
+//* scope[+] = Reference(johnmoehrke.consentwithsegmentation.consenttreat)
 * testTools = "some good tool"
 * description = "Test user access against various kinds of Consent"
 * testCase[+].sequence = 1
@@ -372,10 +372,10 @@ InstanceOf: DocumentReference
 Title: "Binary Gerkin script using DocumentReference"
 Description: "Example of a gerkin feature file using DocumentReference."
 * status = #current
-* content.attachment.id = "ig-loader-give-consent.feature"
-//* content.attachment.url = "Binary/B-gerkin-script"
-//* content.attachment.contentType = #text/plain
-* content.attachment.contentType = #text/x-gerkin
+//* content.attachment.id = "ig-loader-give-consent.feature"
+* content.attachment.url = "Binary/B-gerkin-script"
+* content.attachment.contentType = #text/plain
+//* content.attachment.contentType = #text/x-gherkin
 
 
 // binary throws a File Type error that DocumentReference does not
@@ -385,5 +385,5 @@ InstanceOf: Binary
 Title: "Binary Gerkin script"
 Description: "Example of a binary Gerkin script using Binary."
 //* contentType = #text/plain
-* contentType = #text/x-gerkin
+* contentType = #text/x-gherkin
 * data = "ig-loader-give-consent.feature"
