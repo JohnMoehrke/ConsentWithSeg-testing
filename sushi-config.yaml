@@ -51,6 +51,13 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   apply-publisher: 'true'
   apply-version: 'true'
   propagate-status: 'true'
+  path-binary: input/images
+
+# resources:
+#  Binary/give-consent.feature:
+#    extension:
+#      - url: http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format
+#        valueCode: "text/x-gherkin"
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

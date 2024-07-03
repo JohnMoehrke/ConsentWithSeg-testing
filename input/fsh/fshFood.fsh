@@ -320,6 +320,7 @@ Feature: todo
 * testCase[=].scope = Reference(ex-consent-treat)
 * testCase[=].testRun.script.language.coding =  urn:ietf:bcp:13#text/x-gherkin
 * testCase[=].testRun.script.language.text = "Gherkin"
+/*
 * testCase[=].testRun.script.sourceString = """
 Feature: Consent authorize activity for non-sensitive data
 
@@ -336,6 +337,8 @@ Scenario: User requests access and is permitted normal data due to Consent
     And AccessEnforcement removes from the Search Response Bundle the data tagged as sensitive (R-ConfidentalityCode)
     And Only non-sensitive data is given
 """
+*/
+* testCase[=].testRun.script.sourceReference = Reference(Dr-gerkin-script)
 * testCase[=].testRun.narrative = """
 ```Gherkin
 Feature: Consent authorize activity for non-sensitive data
@@ -363,3 +366,24 @@ Description: "Some good thing"
 * name = "RudimentaryConsetTreatTest"
 * status = #active
 * scope.artifact = Canonical(johnmoehrke.consentwithsegmentation.consenttreat)
+
+Instance: Dr-gerkin-script
+InstanceOf: DocumentReference
+Title: "Binary Gerkin script using DocumentReference"
+Description: "Example of a gerkin feature file using DocumentReference."
+* status = #current
+* content.attachment.id = "ig-loader-give-consent.feature"
+//* content.attachment.url = "Binary/B-gerkin-script"
+//* content.attachment.contentType = #text/plain
+* content.attachment.contentType = #text/x-gerkin
+
+
+// binary throws a File Type error that DocumentReference does not
+// likely needs a IG extension - implementationguide-resource-format
+Instance: B-gerkin-script
+InstanceOf: Binary
+Title: "Binary Gerkin script"
+Description: "Example of a binary Gerkin script using Binary."
+//* contentType = #text/plain
+* contentType = #text/x-gerkin
+* data = "ig-loader-give-consent.feature"
