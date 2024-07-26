@@ -51,10 +51,15 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   apply-publisher: 'true'
   apply-version: 'true'
   propagate-status: 'true'
-  path-binary: input/images
+  path-binary: input/tests
+  path-pages: input/tests
 
-# resources:
+#resources:
 #  Binary/give-consent.feature:
+#    extension:
+#      - url: http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format
+#        valueCode: "text/x-gherkin"
+#  Binary/only-non-sensitive.feature:
 #    extension:
 #      - url: http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format
 #        valueCode: "text/x-gherkin"
