@@ -71,6 +71,7 @@ menu:
   Home: index.html
   TestPlan: testplan.html
   Artifacts: artifacts.html
+  About: about.html
 
 
 pages:
@@ -79,6 +80,9 @@ pages:
     generation: markdown
   testplan.md:
     title: Test Plan
+    generation: markdown
+  about.md:
+    title: About
     generation: markdown
 
     

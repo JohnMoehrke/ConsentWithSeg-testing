@@ -247,35 +247,7 @@ Description: "Something good"
 * testCase[=].testRun.script.language.text = "Gherkin"
 // todo: must escape the `<` and `>` as IG publisher doesn't like these in strings
 // todo: must replicate Gherkin in both sourceString (computable script), and narrative (human rendering); as Gherkin is both narrative and script
-* testCase[=].testRun.script.sourceString = """
-Feature: Basic Consent 
-
-Background: purpose of use is allowed
-
-Scenario: User requests access and is authorized due to basic consent 
-
-Scenario Outline: basic
-  Given @ConsentRecorder has or has not recorded a \<Consent\>
-    And default rule is \<default\>
-  When \<user\> uses @UserApp to request access control token
-    And @AccessControlDecider actor consults the @ConsentRepository
-    And \<Consent\> 
-  Then Authorization \<auth\>
-
-Examples:
-
-  | Consent | default | User  | auth   |
-  |---------|---------|-------|--------|
-  | none    | deny    | User1 | deny   |
-  | none    | deny    | User2 | deny   |
-  | none    | permit  | User1 | permit |
-  | none    | permit  | User2 | permit |
-  | permit  | ~any~   | User1 | permit |
-  | permit  | ~any~   | User2 | permit |
-  | deny    | ~any~   | User1 | deny   |
-  | deny    | ~any~   | User2 | deny   |
-"""
-// todo: must escape the `<` and `>` as IG publisher doesn't like these in markdown
+* testCase[=].testRun.script.sourceReference = Reference(Dr-only-non-sensitive-script)
 * testCase[=].testRun.narrative = """
 ```Gherkin
 Feature: Basic Consent 
@@ -338,7 +310,7 @@ Scenario: User requests access and is permitted normal data due to Consent
     And Only non-sensitive data is given
 """
 */
-* testCase[=].testRun.script.sourceReference = Reference(Dr-gerkin-script)
+* testCase[=].testRun.script.sourceReference = Reference(Dr-give-consent-script)
 * testCase[=].testRun.narrative = """
 ```Gherkin
 Feature: Consent authorize activity for non-sensitive data
@@ -367,23 +339,39 @@ Description: "Some good thing"
 * status = #active
 * scope.artifact = Canonical(johnmoehrke.consentwithsegmentation.consenttreat)
 
-Instance: Dr-gerkin-script
+Instance: Dr-give-consent-script
 InstanceOf: DocumentReference
-Title: "Binary Gerkin script using DocumentReference"
-Description: "Example of a gerkin feature file using DocumentReference."
+Title: "DocumentReference Gherkin script in Binary"
+Description: "Example of a gherkin feature file using DocumentReference pointing at a Binary.
+Give Consent feature"
 * status = #current
 //* content.attachment.id = "ig-loader-give-consent.feature"
-* content.attachment.url = "Binary/B-gerkin-script"
-* content.attachment.contentType = #text/plain
-//* content.attachment.contentType = #text/x-gherkin
+* content.attachment.url = "Binary/B-give-consent-script"
+//* content.attachment.contentType = #text/plain
+* content.attachment.contentType = #text/x-gherkin
 
 
 // binary throws a File Type error that DocumentReference does not
 // likely needs a IG extension - implementationguide-resource-format
-Instance: B-gerkin-script
+Instance: B-give-consent-script
 InstanceOf: Binary
-Title: "Binary Gerkin script"
-Description: "Example of a binary Gerkin script using Binary."
+Title: "Binary Gherkin script"
+Description: "Example of a binary Gherkin script using Binary.
+Give Consent feature"
 //* contentType = #text/plain
 * contentType = #text/x-gherkin
 * data = "ig-loader-give-consent.feature"
+
+Instance: Dr-only-non-sensitive-script
+InstanceOf: DocumentReference
+Title: "DocumentReference - Only Non-Sensitive Gherkin script"
+Description: "Example of a gherkin feature file using DocumentReference.
+only Non-Sensitive feature
+
+Note, IG-Publisher bug keeps this from working. (a) IG-Publisher doesn't understand .feature files, and thus will not load them; and will not know to set the contentType properly. yet one can't preset the contentType as that fails too."
+* status = #current
+* content.attachment.id = "ig-loader-non-sensitive-script.feature"
+//* content.attachment.contentType = #text/x-gherkin
+//* content.attachment.contentType = #text/plain
+
+
