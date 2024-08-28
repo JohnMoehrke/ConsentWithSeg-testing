@@ -370,7 +370,7 @@ only Non-Sensitive feature
 
 Note, IG-Publisher bug keeps this from working. (a) IG-Publisher doesn't understand .feature files, and thus will not load them; and will not know to set the contentType properly. yet one can't preset the contentType as that fails too."
 * status = #current
-* content.attachment.id = "ig-loader-non-sensitive-script.feature"
+* content.attachment.id = "ig-loader-only-non-sensitive.feature"
 //* content.attachment.contentType = #text/x-gherkin
 //* content.attachment.contentType = #text/plain
 
