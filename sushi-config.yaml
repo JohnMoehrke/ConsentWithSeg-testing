@@ -34,6 +34,9 @@ dependencies:
   johnmoehrke.consentwithsegmentation:
     version: current
     uri: http://johnmoehrke.github.io/ConsentWithSegmentation/ImplementationGuide/johnmoehrke.consentwithsegmentation
+  fhir.dicom:
+    uri: http://fhir.org/packages/fhir.dicom
+    version: 2024.2.20240331 
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
